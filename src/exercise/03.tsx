@@ -4,27 +4,28 @@
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, { App, initExo2 } from "../lib/exerciseHelper";
+import displayText, { App, initExo2 } from "../lib/exerciseHelper"
 const exercice = () => {
-const divExoName = 'formExoFinal3'
-initExo2(divExoName)
+  const divExoName = "formExoFinal3"
+  initExo2(divExoName)
 
-// ✔️ Début de l'exercice
+  // ✔️ Début de l'exercice
 
-// 🐶 récupurère tous les champs 'input' avec "querySelectorAll"
-// 🤖
-// const inputs
+  // 🐶 récupurère tous les champs 'input' avec "querySelectorAll"
+  // 🤖
+  const inputs = document.querySelectorAll("input")
 
-// 🐶 parcours la liste avec foreach
-// 🤖
-// inputs.forEach(el => {
-//   verifie si le type == text
-//   si oui change le type = color
-// })
+  // 🐶 parcours la liste avec foreach
+  // 🤖
+  inputs.forEach((el) => {
+    if (el.type == "text") {
+      el.setAttribute("type", "color")
+    }
+  })
 
-/*
+  /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
 */
-};
-export default () => <App exercice={exercice} />;
+}
+export default () => <App exercice={exercice} />
